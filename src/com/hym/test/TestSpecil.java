@@ -13,7 +13,7 @@ public class TestSpecil {
     public static void main(String[] args) {
 
         SqlSession sqlSession = MybatisUtill.getSqlSession(false);
-        String spilinfoname ="spilinfoname";
+        String spilinfoname = "spilinfoname";
         int pageNum=1;
         int pageSize=5;
         int start=(pageNum-1)*pageSize;

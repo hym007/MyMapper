@@ -5,6 +5,8 @@
 <mapper namespace="com.hym.mapper.SpecilMapper">
     
     <select id="findSpecilSplit" parameterType="java.util.Map" resultType="com.hym.po.Specil">
-        select * from specilinfo where ${colNameLike} like concat('%',#{keyword},'%') limit #{start},#{pageSize}
+        select * from specilinfo
+        where ${colNameLike} like concat('%',#{keyword},'%')
+        limit #{start},#{pageSize}
     </select>
 </mapper>
