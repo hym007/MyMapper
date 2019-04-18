@@ -13,6 +13,7 @@ public class TestSpecil {
     public static void main(String[] args) {
 
         SqlSession sqlSession = MybatisUtill.getSqlSession(false);
+        String spilinfoname ="spilinfoname";
         int pageNum=1;
         int pageSize=5;
         int start=(pageNum-1)*pageSize;
@@ -21,6 +22,8 @@ public class TestSpecil {
         Map<String,Object> map = new HashMap<>();
         map.put("start",start);
         map.put("pageSize",pageSize);
+        map.put("colNameLike",spilinfoname);
+        map.put("keyword","技");
 
         List<Specil> specilList = specilMapper.findSpecilSplit(map);
 
